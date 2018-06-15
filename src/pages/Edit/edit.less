@@ -1,0 +1,118 @@
+.edit-page {
+    height: 100%;
+
+    .header{
+        height: 40px;
+        background-color: #444;
+        display: flex;
+        align-items: center;
+
+        .logo{
+            flex: 0 0 88px;
+            margin-left: 15px;
+            img{
+                width: 100%;
+                vertical-align: middle;
+            }
+        }
+        .tools-menu{
+            flex: 1;
+            margin-left: 50px;
+            background-color: #444;
+            .el-menu{
+                background: none;
+                .el-submenu {
+                    .el-submenu__title{
+                        height: 40px;
+                        line-height: 40px;
+                        color: #999;
+                        padding: 0 15px;
+                        i{display: none};
+                    }
+                    .el-menu{
+                        .el-menu-item{
+                            height: 46px;
+                            line-height: 46px;
+                            i{
+                                color: #20a0ff;
+                                margin-right: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .el-menu--horizontal .el-submenu>.el-menu{
+                top: 40px;
+                padding: 0; 
+            }
+        }
+    }
+
+    .fulll-screen{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-items: stretch;
+
+        .left-screen{
+            flex: 0 0 300px;
+            background-color: #fff;
+            height: 100%;
+            overflow-y: auto;
+            overflow-x: hidden;
+            border: 1px solid #d3dce6;
+            transition: all .4s cubic-bezier(0.5, 0, 0, 1);
+        }
+        .center-screen{
+            flex: 0 0 440px;
+            background-color: #fff;
+            height: 100%;
+            overflow: hidden;
+            border-bottom: 1px #d3dce6 solid;
+        }
+        .right-screen{
+            flex: 1 1 auto;
+            background-color: #fff;
+            height: 100%;
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+
+        .view-tool{
+            position: absolute;
+            bottom: 15px;
+            left: 10px;
+            display: flex;
+            align-items: center;
+
+            .three-colum{
+                display: flex;
+                width: 24px;
+                height: 15px;
+                border: 1px #ccc solid;
+                justify-content: space-between;
+                margin-right: 10px;
+                cursor: pointer;
+                i{
+                    width: 6px;
+                    background-color: #bbb;
+                }
+            }
+            .two-colum{
+                display: flex;
+                width: 24px;
+                height: 15px;
+                border: 1px #ccc solid;
+                justify-content: space-between;
+                cursor: pointer;
+                i{
+                    width: 10px;
+                    background-color: #bbb;
+                }
+            }
+        }
+    }
+}

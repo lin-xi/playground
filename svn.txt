@@ -1,0 +1,23 @@
+ 解决冲突
+svn resolve --accept working server.js
+svn resolve --accept working -R ./build
+svn resolve --accept theirs-full -R ./build
+svn resolve --accept theirs-full -R ./static
+
+根据状态添加所有新文件
+svn st | awk '{if ( $1 == "?") { print $2}}' | xargs svn add
+根据状态删除所有旧文件
+svn st | awk '{if ( $1 == "!") { print $2}}' | xargs svn delete
+
+svn撤销添加
+svn revert a.js
+
+svn撤销添加文件夹
+svn revert -R ./build --depth=infinity
+svn revert -R ./node_modules --depth=infinity
+
+忽略文件夹
+配置忽略文件 vi ~/.subversion/config
+如果”.subversion”目录不存在，请运行”svn status”命令，虽然此命令会失败，但是会为你创建所需要的文件。
+找到 global-ignores 一行，去掉注释，编辑成：
+global-ignores = node_modules *.DS_store

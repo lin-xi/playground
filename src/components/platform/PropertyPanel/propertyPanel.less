@@ -1,0 +1,95 @@
+.property-panel{
+    position: relative;
+    background-color: #fff;
+    padding: 0px;
+    height: 100%;
+
+    .el-tabs{
+        .el-tabs__item{
+            height: 32px;
+            line-height: 32px;
+        }
+    }
+
+    .component-tool{
+        position: relative;
+        left: -15px;
+        top: -15px;
+        width: 120%;
+        padding: 5px 10px 5px 5px;
+        border-bottom: 1px #ddd solid;
+
+        a{
+            display: inline-block;
+            text-align: center;
+            padding: 0 10px;
+            border: 1px #fff solid;
+            border-radius: 4px;
+            img{
+                display: block;
+                margin: 5px auto;
+                width: 18px;
+                height: 18px;
+            }
+        }
+        a:hover{
+            border: 1px #20a0ff solid;
+            cursor: pointer;
+        }
+    }
+
+    .split{
+        position: relative;
+        left: -15px;
+        width: 120%;
+        height: 0;
+        border-bottom: 1px #eee solid;
+        margin-top: 8px;
+        margin-bottom: 8px;
+    }
+
+    .el-tabs.el-tabs--border-card{
+        display: block;
+        height: 100%;
+        overflow-y: auto;
+    }
+
+    .line-item{
+        padding: 6px 0;
+        display: flex;
+        align-items: center;    
+    }
+    .line-item .label{
+        padding-right: 5px;
+        width: 70px;
+        font-size: 14px;
+        color: #222;
+    }
+    .input-item{
+        display: inline-block;
+        padding: 3px 10px;
+        box-sizing: border-box;
+        color: #1f2d3d;
+        height: 34px;
+        background-color: #fff;
+        background-image: none;
+        border: 1px solid #C0CCDA;
+        border-radius: 4px;
+        -webkit-transition: border-color .2s cubic-bezier(.645,.045,.355,1);
+        transition: border-color .2s cubic-bezier(.645,.045,.355,1);
+        outline: 0;
+        line-height: normal;
+        vertical-align: middle;
+    }
+    .input-item.textarea{
+        width: 200px;
+        height: 50px;
+    }
+    .input-item:hover {
+        border-color: #8492A6;
+    }
+    .input-item:focus {
+        outline: 0;
+        border-color: #20a0ff;
+    }
+}

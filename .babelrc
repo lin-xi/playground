@@ -1,0 +1,10 @@
+{
+  "presets": [
+    "env"
+  ],
+  "plugins": [
+    "transform-vue-jsx",
+    "syntax-object-rest-spread",
+    "transform-class-properties"
+  ]
+}
