@@ -55,5 +55,5 @@ module.exports = {
 ## Screenshot
 
 ### Element
-![playground](./doc/logo.png)
+![playground](./doc/sh1.png)
 
