@@ -30,7 +30,7 @@ export default {
       role: 'manager',
       username: 'admin',
       pageData: {},
-      codeShow: true,
+      codeShow: false,
       code: ''
     }
   },
