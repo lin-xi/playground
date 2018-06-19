@@ -1,7 +1,10 @@
 ![playground](./logo.png)
 
-------
- UI framework playground
+--------
+# UI framework playground
+
+Config the component with the mouse through WYSWYG， have fun！
+
 
 ## UI framework configaration
 
@@ -35,14 +38,19 @@ module.exports = {
 ```
 
 ### Component Configaration
-
-|:---------:|:---------|:----------|:-----------|
-|  名称     |  描述      |  默认值    |  可选值    |
-|  name    |  属性名称   |  -        |    -      |
-|  title   |  属性描述   |  -        |    -      |
-|  type    |  类型      |  -        |  text 文本型<br> number 数字型<br> enum 枚举型<br> switch 布尔型    |
-|  value   |  默认值    |  -        |    -      |
-|  values  |  枚举的值，只有当类型为enum是有效   |  -   |  -    |
+| 名称       | 描述       | 默认值     |  可选值     |
+|:---------:|:-----------|:----------|:-----------|
+|  name     |  属性名称   |  -        |    -       |
+|  title    |  属性描述   |  -        |    -       |
+|  type     |  类型       |  -       |  text 文本型<br> number 数字型<br> enum 枚举型<br> switch 布尔型    |
+|  value    |  默认值     |  -        |    -       |
+|  values   |  枚举的值，只有当类型为enum是有效  |  -   |  -    |
 
 
 ## Screenshot
+
+### Element
+
+
+
+### Antd
