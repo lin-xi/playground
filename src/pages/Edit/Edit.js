@@ -4,6 +4,7 @@ import utils from 'utils'
 import ComponentPanel from 'components/platform/ComponentPanel/ComponentPanel'
 import EditorPanel from 'components/platform/EditorPanel/EditorPanel'
 import PropertyPanel from 'components/platform/PropertyPanel/PropertyPanel'
+import CodePanel from 'components/platform/CodePanel/CodePanel'
 import ToolMenu from 'components/platform/ToolMenu/ToolMenu'
 
 import LOGO from '../../assets/images/logo.png'
@@ -17,10 +18,9 @@ export default {
     }
   },
   created () {
-    let mid = utils.getQueryString('modelId')
-    this.$root.modelId = mid
-    eventHub.$on('publish-page', function (mod) {
-      this.showLoading = true
+    eventHub.$on('publish-page', (code) => {
+      this.code = code
+      this.codeShow = !this.codeShow
     })
   },
 
@@ -29,7 +29,9 @@ export default {
       showLoading: false,
       role: 'manager',
       username: 'admin',
-      pageData: {}
+      pageData: {},
+      codeShow: true,
+      code: ''
     }
   },
 
@@ -62,6 +64,9 @@ export default {
           </div>
           <div class='right-screen'>
             <PropertyPanel />
+            <transition name='slide-fade'>
+              <CodePanel v-show={this.codeShow} value={this.code} />
+            </transition>
           </div>
           <div class='view-tool' >
             <span>视图：</span>
@@ -75,6 +80,5 @@ export default {
 
   mounted () {
     this.$refs.fs.style.height = window.innerHeight - 80 + 'px'
-    this.hideLoading()
   }
 }

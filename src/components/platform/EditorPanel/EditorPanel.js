@@ -629,7 +629,7 @@ export default {
         result.push(node.vnode)
       }
       console.log(result)
-      return result
+      eventHub.$emit('publish-page', result.join('\n'))
     },
 
     updateTreeData () {

@@ -5,9 +5,14 @@
 
 Config the component with the mouse through WYSWYG， have fun！
 
++ config library.config.js
++ npm run dev
++ open http://localhost:8800
+
 
 ## UI framework configaration
 
+**library.config.js**
 ```js
 module.exports = {
   name: 'ELEMENT',  // UI framework Name
@@ -22,7 +27,7 @@ module.exports = {
         {
           name: 'size',         //props name
           title: '尺寸',         //props description name
-          type: 'enum',         //type, text, number, enum, switch are supported
+          type: 'enum',         //type, text, number, object, enum, switch are supported
           values: [             //if type is enum, values are enumerated options
             {label: '中', value: 'medium'},
             {label: '小', value: 'small'},
@@ -42,7 +47,7 @@ module.exports = {
 |:---------:|:-----------|:----------|:-----------|
 |  name     |  属性名称   |  -        |    -       |
 |  title    |  属性描述   |  -        |    -       |
-|  type     |  类型       |  -       |  text 文本型<br> number 数字型<br> enum 枚举型<br> switch 布尔型    |
+|  type     |  类型       |  -       |  text 文本型<br> number 数字型<br>object 对象<br>enum 枚举型<br> switch 布尔型 |
 |  value    |  默认值     |  -        |    -       |
 |  values   |  枚举的值，只有当类型为enum是有效  |  -   |  -    |
 
@@ -50,7 +55,5 @@ module.exports = {
 ## Screenshot
 
 ### Element
+![playground](./doc/logo.png)
 
-
-
-### Antd

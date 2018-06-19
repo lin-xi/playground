@@ -7,7 +7,9 @@ const webpackHotMiddleware = require('webpack-hot-middleware')
 var app = express()
 
 var compiler = webpack(webpackConfig)
-app.use(webpackDevMiddleware(compiler))
+app.use(webpackDevMiddleware(compiler, {
+  logLevel: 'error'
+}))
 app.use(webpackHotMiddleware(compiler))
 
 app.listen(8800, '127.0.0.1', () => {

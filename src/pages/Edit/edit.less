@@ -74,11 +74,27 @@
             border-bottom: 1px #d3dce6 solid;
         }
         .right-screen{
+            position: relative;
             flex: 1 1 auto;
             background-color: #fff;
             height: 100%;
             overflow-y: auto;
             overflow-x: hidden;
+
+            .slide-fade-enter-active {
+                transition: all .3s ease;
+            }
+            .slide-fade-leave-active {
+                transition: all .3s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+            }
+            .slide-fade-enter, .slide-fade-leave-to {
+                transform: translateX(100px);
+            }
+
+            .CodeMirror {
+                height: 100%;
+                width: 100%;
+            }
         }
 
         .view-tool{
