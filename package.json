@@ -41,7 +41,7 @@
     "webpack-parallel-uglify-plugin": "^1.1.0"
   },
   "scripts": {
-    "build": "rimraf build/* & webpack --config webpack.prod.config.js --optimize-minimize",
+    "build": "rimraf build/* & webpack --config webpack.config.js --optimize-minimize",
     "dev": "node server.js library.config.js",
     "prod": "babel-node server_prod.js"
   }

@@ -1,35 +1,48 @@
-性能优化：
-1. 使用babel-plugin-import-fix, 只导入element中被用到的组件
-2. 升级webpack3
-3. webpack code spliting
+![playground](./logo.png)
 
-优化前：
-0.js        1.34mb
-1.js        1.34mb
-2.js        1.33mb
-3.js        19.4kb
-4.js        13kb
-5.js        12.1kb
-6.js        9.14kb
-7.js        8.4kb
-8.js        4.62kb
-main.js     182kb
-preview.js  1.33mb
-vendor.js   214kb
+------
+ UI framework playground
 
-1. 使用babel-plugin-import-fix之后
-0.js        960kb
-1.js        961kb
-2.js        953kb  
-3.js        19.4kb
-4.js        13kb
-5.js        12.1kb
-6.js        9.14kb
-7.js        8.4kb
-8.js        4.62kb
-main.js     182kb
-preview.js  949kb
-vendor.js   214kb
+## UI framework configaration
 
-2. 重新设置verdor
-vendor: ['vue', 'pixi.js', 'qrious', 'fastclick']
+```js
+module.exports = {
+  name: 'ELEMENT',  // UI framework Name
+  url: 'https://unpkg.com/element-ui/lib/index.js',  // UI framework UMD module path
+  style: 'https://unpkg.com/element-ui/lib/theme-chalk/index.css',    // UI framework theme
+  components: [
+    {
+      name: 'Button',     //Componnet Name
+      title: '按钮',       //Decription Name
+      image: '',          //Icon
+      property: [         //Componnet props
+        {
+          name: 'size',         //props name
+          title: '尺寸',         //props description name
+          type: 'enum',         //type, text, number, enum, switch are supported
+          values: [             //if type is enum, values are enumerated options
+            {label: '中', value: 'medium'},
+            {label: '小', value: 'small'},
+            {label: '迷你', value: 'mini'},
+          ],
+          value: 'medium'       //default value of props
+        },
+      ]
+    }
+    ...
+  ]
+}
+```
+
+### Component Configaration
+
+|:---------:|:---------|:----------|:-----------|
+|  名称     |  描述      |  默认值    |  可选值    |
+|  name    |  属性名称   |  -        |    -      |
+|  title   |  属性描述   |  -        |    -      |
+|  type    |  类型      |  -        |  text 文本型<br> number 数字型<br> enum 枚举型<br> switch 布尔型    |
+|  value   |  默认值    |  -        |    -      |
+|  values  |  枚举的值，只有当类型为enum是有效   |  -   |  -    |
+
+
+## Screenshot
