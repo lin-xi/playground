@@ -111,21 +111,21 @@ export default {
         )
     },
     mounted() {
-        this.padCells(this.columns);
+        // this.padCells(this.columns);
     },
 
     watch: {
-        columns: function(val, oldVal){
+        columns: function (val, oldVal) {
             this.padCells(val);
         }
     },
     methods: {
-        padCells(val){
+        padCells(val) {
             let data = this.getModelData();
-            if(data){
-                if(val >= data.children.length){
+            if (data) {
+                if (val >= data.children.length) {
                     let newCols = val - data.children.length;
-                    for(let i=0; i<newCols; i++){
+                    for (let i = 0; i < newCols; i++) {
                         this.addComponent({
                             name: 'xp-cell',
                             path: 'common/Cell/Cell',
@@ -134,7 +134,7 @@ export default {
                     }
                 } else {
                     let newCols = data.children.length - val;
-                    for(let i=0; i<newCols; i++){
+                    for (let i = 0; i < newCols; i++) {
                         let child = data.children.pop();
                         this.removeComponent(child.cid);
                     }
